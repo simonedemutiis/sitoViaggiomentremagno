@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.logo1{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+h1,h2{
+    font-weight: 300;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+/*Navbar*/
+.navbar .logo{
+    font-weight: 400;
+}
+
+.navbar{
+    background-color: black;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    color: white;
+    opacity: 0.8;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: 1s;
+}
+
+
+
+.navbar ul{
+display: flex;
+}
+
+.navbar ul li a {
+padding: 10px;
+margin-right: 10px;
+}
+.navbar ul li a:hover{
+    border-bottom: 2px solid rgb(215, 8, 8);
+}
+
+/* Content*/
+
+.box{
+    height: 100vh;
+    background: url(IMG/spaghetti-sfondo.jpg) no-repeat center center/cover;
+    position: relative;
+    color: white;
+}
+
+.box .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    height: 100%;
+}
+
+.box .content h1{
+    font-size: 40px;
+}
+
+.box .content p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 20px 0 40px;
+}
+
+.box::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.4;
+}
+
+.box *{
+    z-index: 4;
+}
+
+.box .content.blog{
+    background: url("/imm10.jpg") no-repeat center center/cover;
+
+}
+
+.section-padding{
+    padding: 20px 20px 40px;
+}
+
+.section-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.section-header h2 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.section-header h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.flex-items{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.flex-items > div {
+    padding: 20px;
+}
+
+.about img{
+    border-radius: 20%;
+
+}
+
+.flex-columns .column{
+    display: flex;
+}
+
+.flex-columns .column .column-1, .flex-columns .column .column-2 {
+    width: 50%;
+}
+
+.flex-columns .column .column-2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.flex-columns .column .column-2 h4{
+    font-size: 25px;
+}
+
+.flex-columns .column .column-2 h2{
+    font-size: 40px;
+}
+
+.flex-columns .column .column-2 p {
+    font-size: 20px;
+}
+
+.flex-columns .column img{
+    width: 100%;
+    height: 100%;
+}
+
+.flex-columns.flex-reverse .column{
+    flex-direction: row-reverse;
+}
+
+.flex-grid .img{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 8px;
+}
+
+@media(max-width:800px){
+    .flex-columns .column{
+        flex-direction: column;
+    }
+    .flex-columns .column .column-1, .flex-columns .column .column-2{
+        width: 100%;
+    }
+    .flex-columns.flex-reverse .column{
+        flex-direction: column;
+    }
+
+    .flex-columns.flex-reverese .column .column-1, .flex-columns.flex-reverese .column .column-2{
+        width: 100%;
+    } 
+    
+    .navbar{
+        flex-direction: column;
+        padding: 10px;
+        line-height: 2;
+        height: 120px;
+    }
+    .box .content h1{
+        font-size: 30px;
+    }
+
+    .box .content p{
+        font-size: 18px;
+        max-width: 700px;
+        margin: 20px 0 40px;
+    }
+
+
+
+
+
+}
